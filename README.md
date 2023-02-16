@@ -2,11 +2,6 @@
 
 This is an skeleton app that uses the Alchemy SDK rigged to Alchemy's Enhanced APIs in order to display all of an address's ERC-20 token balances.
 
-## Set Up
-
-1. Install dependencies by running `npm install`
-2. Start application by running `npm run dev`
-
 ## Challenge
 
 Fork this repo and build out more features! This is minimalistic on purpose.
@@ -24,3 +19,8 @@ Here are a few challenge suggestions:
 7. There are ways to make this app faster... can you implement some of them? How can the query be made _even_ quicker?
 8. Can you add ENS support for inputs?
 9. Completely open-ended!! Use this as the base for your next hackathon project, dream company or personal expedition :)
+
+## How to use
+1. Rename the ```.envexample``` file to ```.env``` and insert your Alchemy API Key. [Get one here if you don't have one!](http://alchemy.com)
+2. Install dependencies by running `npm install`
+3. Start application by running `npm run dev`

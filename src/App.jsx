@@ -20,12 +20,16 @@ function App() {
 
   async function getTokenBalance() {
     const config = {
-      apiKey: '<-- COPY-PASTE YOUR ALCHEMY API KEY HERE -->',
+      apiKey: import.meta.env.VITE_ALCHEMY_API_KEY,
       network: Network.ETH_MAINNET,
     };
 
     const alchemy = new Alchemy(config);
-    const data = await alchemy.core.getTokenBalances(userAddress);
+    let userName = userAddress;
+    if(userAddress.endsWith(".eth")) {
+      userName = await alchemy.core.resolveName(userAddress)
+    }
+    const data = await alchemy.core.getTokenBalances(userName);
 
     setResults(data);
 
