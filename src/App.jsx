@@ -97,6 +97,7 @@ function App() {
         getUserTokenBalance={getUserTokenBalance}
         setHasQueried={setHasQueried}
         setQueryAddress={setQueryAddress}
+        setResults={setResults}
       />
       <Flex
         w="100%"
@@ -121,7 +122,7 @@ function App() {
           fontSize={20}
           onClick={getTokenBalance}
           mt={36}
-          colorScheme={"blue"}
+          colorScheme={"red"}
         >
           Get Token Balances
         </Button>
@@ -158,7 +159,7 @@ function App() {
                             <Heading size="md">
                               {tokenDataObjects[i].symbol}
                             </Heading>
-                            <Text color="blue.600" fontSize="2xl">
+                            <Text color="red.600" fontSize="2xl">
                               <b>Balance:</b>&nbsp;
                               {
                                 Utils.formatUnits(
@@ -180,7 +181,7 @@ function App() {
                         <Divider color="lightgrey" />
                         <CardFooter>
                           <ButtonGroup spacing="2">
-                            <Button variant="ghost" colorScheme="blue">
+                            <Button variant="ghost" colorScheme="red">
                               <Link
                                 isExternal
                                 href={
